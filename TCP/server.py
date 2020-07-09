@@ -4,7 +4,6 @@ from API.api import Api
 
 # TCPServer
 class TCPServer(object):
-
     api = None
 
     def __init__(self):
