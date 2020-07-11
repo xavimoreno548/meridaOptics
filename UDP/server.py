@@ -11,13 +11,13 @@ class RPCServer(RPCProtocol):
         super().__init__()
         self.api = Api()
 
-    def rpc_get_all(self, sender):
+    async def rpc_get_all(self, sender):
         return self.api.get_all()
 
-    def rpc_remove(self, sender, id: int, stock: int):
+    async def rpc_remove(self, sender, id: int, stock: int):
         return self.api.remove(id, stock)
 
-    def rpc_insert(self,sender, id: int, stock: int):
+    async def rpc_insert(self,sender, id: int, stock: int):
         return self.api.insert(id, stock)
 
 
